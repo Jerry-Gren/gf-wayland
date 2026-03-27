@@ -6,18 +6,35 @@
 ![Another screenshot, showing the watch window and different color scheme.](https://raw.githubusercontent.com/nakst/cdn/main/gf1.png)
 ![Another screenshot, showing the disassembly and register windows.](https://raw.githubusercontent.com/nakst/cdn/main/gf3.png)
 
+**Note:** This is a fork of [nakst/gf](https://github.com/nakst/gf) with added native Wayland support.
+
 ## Building
 
 Download this project's source.
 
 ```bash
-git clone https://github.com/nakst/gf.git
+git clone https://github.com/Jerry-Gren/gf.git
 ```
 
-And compile the application.
+### Dependencies
+
+For native Wayland support, you will need the following dependencies installed on your system:
+- `wayland-scanner`
+- `libwayland-client`
+- `libwayland-cursor`
+- `libxkbcommon-dev`
+
+*(For Debian/Ubuntu: `sudo apt install libwayland-dev libwayland-cursor0 libxkbcommon-dev wayland-protocols`)*
+
+### Compiling
+
+Compile the application for your target display server.
 
 ```bash
-# linux
+# Linux (Native Wayland)
+./build.sh wayland
+
+# Linux (X11 / XWayland)
 ./build.sh
 
 # freebsd
