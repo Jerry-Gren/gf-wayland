@@ -13,7 +13,7 @@
 Download this project's source.
 
 ```bash
-git clone https://github.com/Jerry-Gren/gf.git
+git clone https://github.com/Jerry-Gren/gf-wayland.git
 ```
 
 ### Dependencies
